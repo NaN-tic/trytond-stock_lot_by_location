@@ -1,0 +1,11 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "model:ir.action,name:act_lots_by_locations"
+msgid "Lot by Locations"
+msgstr "Lote por ubicaciones"
+
+msgctxt "model:ir.action,name:wizard_lot_by_location"
+msgid "Lot by Locations"
+msgstr "Lote por ubicaciones"

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <record model="ir.action.act_window" id="act_lots_by_locations">
+            <field name="name">Lot by Locations</field>
+            <field name="res_model">stock.location</field>
+            <field name="context_model">stock.lots_by_location.context</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_lots_by_locations_tree_view">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="stock.location_quantity_view_tree"/>
+            <field name="act_window" ref="act_lots_by_locations"/>
+        </record>
+        <record model="ir.action-res.group" id="wizard_lot_by_location-group_stock">
+            <field name="action" ref="act_lots_by_locations"/>
+            <field name="group" ref="stock.group_stock"/>
+        </record>
+
+        <record model="ir.action.wizard" id="wizard_lot_by_location">
+            <field name="name">Lot by Locations</field>
+            <field name="wiz_name">stock.lot.by_locations</field>
+            <field name="model">stock.lot</field>
+        </record>
+        <record model="ir.action.keyword" id="act_location_quantity_keyword1">
+            <field name="keyword">form_relate</field>
+            <field name="model">stock.lot,-1</field>
+            <field name="action" ref="wizard_lot_by_location"/>
+        </record>
+
+    </data>
+</tryton>

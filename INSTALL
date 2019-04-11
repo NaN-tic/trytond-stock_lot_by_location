@@ -7,6 +7,13 @@ Prerequisites
  * Python 2.7 or later (http://www.python.org/)
  * trytond (http://www.tryton.org/)
 
+Patches
+-------
+
+Require apply the patch:
+
+  issue239_630.diff # [stock] get location quantity by product, product template or lot
+
 Installation
 ------------
 

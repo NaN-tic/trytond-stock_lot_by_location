@@ -6,6 +6,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="ir.action.act_window" id="act_lots_by_locations">
             <field name="name">Lot by Locations</field>
             <field name="res_model">stock.location</field>
+            <field name="domain" eval="[('parent', '=', None)]" pyson="1"/>
             <field name="context_model">stock.lots_by_location.context</field>
         </record>
         <record model="ir.action.act_window.view" id="act_lots_by_locations_tree_view">
